@@ -1,8 +1,8 @@
 import React from "react";
 
-const Form = () => {
+const FormSignUp = () => {
   return (
-    <div>
+    <div className="spacing">
       <form className="column-content">
         <input className="input-form" placeholder="Name"></input>
         <input className="input-form" placeholder="Email"></input>
@@ -13,7 +13,7 @@ const Form = () => {
           <span className="primary-text">Privacy Policy</span>
         </label>
 
-        <div className="row-content">
+        <div className="row-content spacing">
           <button className="btn">Sign Up</button>
           <button className="btn-outlined">Sign In</button>
         </div>
@@ -22,4 +22,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default FormSignUp;

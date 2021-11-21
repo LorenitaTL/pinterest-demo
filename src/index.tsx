@@ -2,14 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./scss/app.scss";
 import { Provider } from "react-redux";
-import LandingPage from "./modules/Home/LandingPage";
+import SignUp from "./modules/Auth/pages/SignUp";
+import SignIn from "./modules/Auth/pages/SignIn";
+import LandingPage from "./modules/Home/LandingPage"
 import reportWebVitals from "./reportWebVitals";
 import { store } from "./store/store";
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <LandingPage />
+      <SignIn />
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")

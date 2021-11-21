@@ -1,6 +1,7 @@
 @import "variables";
 @import "mixins";
 @import "../modules/Home/scss/home_styles";
+@import "../modules/Auth/scss/auth_styles";
 
 html {
     @include box-sizing(border-box);
@@ -67,8 +68,12 @@ html {
     text-align: center;
 }
 
-.login-content{
+.center-items{
     display: flex;
-    width: 100vw;
+    align-items: center;
     justify-content: center;
+}
+
+.spacing{
+    padding-top:2rem;
 }

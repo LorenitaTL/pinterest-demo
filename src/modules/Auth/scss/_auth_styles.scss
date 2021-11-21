@@ -1,0 +1,22 @@
+.auth-content{
+    display: flex;
+    width: auto;
+    justify-content: center;
+    margin: 10rem;
+}
+
+.form-auth{
+    width: 100%;
+    height: auto;
+    align-items: space-between;
+    padding: 5rem;
+}
+
+.image-auth{
+    width: 50%;
+    display: none;
+
+    @include desktop() {
+        display: block;
+    }
+}
