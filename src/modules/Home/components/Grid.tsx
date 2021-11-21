@@ -1,77 +1,20 @@
-import { randomInt } from "crypto";
-import React from "react";
-import { useState } from "react";
-
-const initialState = [
-  {
-    id: randomInt,
-    url: "https://source.unsplash.com/featured/500x400/?dog",
-  },
-  {
-    id: randomInt,
-    url: "https://source.unsplash.com/featured/500x400/?dog",
-  },
-  {
-    id: randomInt,
-    url: "https://source.unsplash.com/featured/500x400/?dog",
-  },
-  {
-    id: randomInt,
-    url: "https://source.unsplash.com/featured/500x400/?dog",
-  },
-  {
-    id: randomInt,
-    url: "https://source.unsplash.com/featured/500x400/?dog",
-  },
-  {
-    id: randomInt,
-    url: "https://source.unsplash.com/featured/500x400/?dog",
-  },
-  {
-    id: randomInt,
-    url: "https://source.unsplash.com/featured/500x400/?dog",
-  },
-  {
-    id: randomInt,
-    url: "https://source.unsplash.com/featured/500x400/?dog",
-  },
-  {
-    id: randomInt,
-    url: "https://source.unsplash.com/featured/500x400/?dog",
-  },
-  {
-    id: randomInt,
-    url: "https://source.unsplash.com/featured/500x400/?dog",
-  },
-  {
-    id: randomInt,
-    url: "https://source.unsplash.com/featured/500x400/?dog",
-  },
-  {
-    id: randomInt,
-    url: "https://source.unsplash.com/featured/500x400/?dog",
-  },
-  {
-    id: randomInt,
-    url: "https://source.unsplash.com/featured/500x400/?dog",
-  },
-  {
-    id: randomInt,
-    url: "https://source.unsplash.com/featured/500x400/?dog",
-  },
-  {
-    id: randomInt,
-    url: "https://source.unsplash.com/featured/500x400/?dog",
-  },
-];
+import { useEffect } from "react";
+import { useSelector, useDispatch, RootStateOrAny } from "react-redux";
+import { imagesStartLoadList } from "../actions/images";
 
 const Grid = () => {
-  const [images, setImages] = useState(initialState);
+  const dispatch = useDispatch();
+  const { images } = useSelector((state: RootStateOrAny) => state.images);
+  console.log("Images", images);
+  useEffect(() => {
+    dispatch(imagesStartLoadList());
+  }, [dispatch]);
+
   return (
     <div className="grid-gallery">
-      {images.map((image) => {
+      {images.map((image: any) => {
         return (
-          <div className="grid-gallery__item">
+          <div className="grid-gallery__item" key={image.id}>
             <img className="grid-gallery__image" src={image.url} alt="data" />
           </div>
         );
