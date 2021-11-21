@@ -1,0 +1,74 @@
+@import "variables";
+@import "mixins";
+@import "../modules/Home/scss/home_styles";
+
+html {
+    @include box-sizing(border-box);
+    font-family: $font-family;
+}
+
+*,
+*:after,
+*:before {
+    @include box-sizing(inherit);
+    margin: 0;
+    padding: 0;
+}
+
+.primary-text {
+    color: $primary
+}
+
+.circle {
+    border-radius: 50%;
+    border: 0.125rem $dark-grey solid;
+    height: 2rem;
+    width: 2rem;
+}
+
+.btn {
+    border: 0.125rem $white solid;
+    background-color: $primary;
+    border-radius: 10%;
+    color: $white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+.btn-outlined {
+    border: 0.125rem $primary solid;
+    background-color: $white;
+    border-radius: 10%;
+    color: $primary;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+.input-form {
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.column-content{
+    display:flex;
+    flex-direction: column;
+}
+
+.row-content{
+    display:flex;
+    justify-content: space-around;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.login-content{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}

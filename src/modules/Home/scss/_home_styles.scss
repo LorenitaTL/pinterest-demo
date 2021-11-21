@@ -1,0 +1,89 @@
+@import "./grid";
+
+.rounded-container {
+    margin: 2rem;
+    border-radius: 2rem;
+    -webkit-box-shadow: 5px 29px 50px 18px rgba(40, 21, 37, 0.23);
+    box-shadow: 5px 29px 50px 18px rgba(40, 21, 37, 0.23);
+
+    @include desktop() {
+        margin: 5rem;
+    }
+}
+
+.custom-search {
+    position: relative;
+    width: auto;
+    margin: 1rem;
+
+
+    .custom-search-input {
+        width: 100%;
+        border: 0.125rem solid $dark-grey;
+        border-radius: 0.7rem;
+        padding: 17px;
+        line-height: 1;
+        box-sizing: border-box;
+        outline: none;
+        @include shadow(lighten($background-grey, 70), rgba(0, 0, 0, 0.15));
+    }
+
+    .custom-search-botton {
+        position: absolute;
+        right: 3px;
+        height: 2rem;
+        width: 2rem;
+        border: 0;
+        background: $dark-grey;
+        color: #fff;
+        outline: none;
+        margin: 10px;
+        padding: 0 10px;
+        border-radius: 50%;
+        @include shadow(lighten($background-grey, 70), rgba(0, 0, 0, 0.15));
+        z-index: 2;
+    }
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include desktop() {
+        flex-direction: row;
+    }
+}
+
+.toolbar {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top:30vh;
+
+    @include desktop() {
+        top:0;
+        flex-direction: column;
+        position:inherit;
+    }
+    .icon {
+        background-color: $primary;
+        color: $white;
+        padding: 1rem;
+        border-radius: 50%;
+    }
+
+    .btn-toolbar {
+        border-radius: 40%;
+        border: 0.125rem $dark-grey solid;
+        height: 2.5rem;
+        width: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem;
+        @include shadow(lighten($background-grey, 70), rgba(0, 0, 0, 0.15));
+    }
+}
