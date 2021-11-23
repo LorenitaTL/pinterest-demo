@@ -3,8 +3,6 @@ import { signUp } from "../actions/actions";
 
 const FormSignUp = () => {
   const dispatch = useDispatch();
-
-  // TODO: change any
   const handleSubmitForm = (e: any) => {
     e.preventDefault();
     dispatch(signUp({ name: "Lorena", email: "lorena@gmail.com", password: "password"}));

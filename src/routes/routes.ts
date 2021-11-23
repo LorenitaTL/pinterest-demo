@@ -12,6 +12,16 @@ interface Route {
 
 export const routes: Route[] = [
   {
+    path: "/home",
+    component: lazy(
+      () =>
+        import(
+          /* webpackChunkName: "SignUp" */ "../modules/Home/LandingPage"
+        )
+    ),
+    name: "Home",
+  },
+  {
     path: "/sign-in",
     component: lazy(
       () =>
@@ -30,15 +40,5 @@ export const routes: Route[] = [
         )
     ),
     name: "Sign-Up",
-  },
-  {
-    path: "/home",
-    component: lazy(
-      () =>
-        import(
-          /* webpackChunkName: "SignUp" */ "../modules/Home/LandingPage"
-        )
-    ),
-    name: "Home",
   },
 ];

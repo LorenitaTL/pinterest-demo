@@ -3,8 +3,6 @@ import { useDispatch } from "react-redux";
 
 const FormSignIn = () => {
   const dispatch = useDispatch();
-
-  // TODO: change any
   const handleSubmitForm = (e: any) => {
     e.preventDefault();
     dispatch(signIn({ name: "Lorena", email: "lorena@gmail.com" }));

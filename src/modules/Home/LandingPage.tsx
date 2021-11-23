@@ -6,7 +6,6 @@ import Grid from "./components/Grid";
 const LandingPage = () => {
   return (
     <div className="rounded-container">
-      {/* TODO: ADd style */}
       <div className="content">
         <Toolbar />
         <div style={{ width: "100%" }}>
